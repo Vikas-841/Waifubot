@@ -17,7 +17,7 @@ async def get_next_sequence_number(sequence_name):
     return sequence_document['sequence_value']
 
 # Upload command
-@application.on_message(command="upload")
+@application.on_message(filters.command("upload"))
 async def upload_command(_, message: Message):
     if str(message.from_user.id) not in sudo_users:
         await message.reply_text('Ask My Owner...')
@@ -76,7 +76,7 @@ async def upload_command(_, message: Message):
         await message.reply_text(f'Unsuccessfully uploaded. Error: {str(e)}')
 
 # Delete command
-@application.on_message(command="delete")
+@application.on_message(filters.command("delete"))
 async def delete_command(_, message: Message):
     if str(message.from_user.id) not in sudo_users:
         await message.reply_text('Ask my Owner to use this Command...')
@@ -99,7 +99,7 @@ async def delete_command(_, message: Message):
         await message.reply_text(f'{str(e)}')
 
 # Update command
-@application.on_message(command="update")
+@application.on_message(filters.command("update"))
 async def update_command(_, message: Message):
     if str(message.from_user.id) not in sudo_users:
         await message.reply_text('You do not have permission to use this command.')
