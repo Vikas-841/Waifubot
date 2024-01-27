@@ -65,8 +65,13 @@ async def upload_command(_, message: Message):
 
         sent_message = await message.reply_photo(
             photo=args[0],
-            caption=f'<b>Character Name:</b> {character_name}\n<b>Anime Name:</b> {anime}\n<b>Rarity:</b> {rarity}\n<b>ID:</b> {id}\nAdded by <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>',
-            parse_mode="HTML"
+            caption=f'''<b>Character Name:</b> {character_name}
+<b>Anime Name:</b> {anime}
+<b>Rarity:</b> {rarity}
+<b>ID:</b> {id}
+Added by <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>''',
+parse_mode='HTML'
+            
         )
 
         character['message_id'] = sent_message.message_id
