@@ -17,7 +17,7 @@ logging.getLogger("pyrate_limiter").setLevel(logging.ERROR)
 LOGGER = logging.getLogger(__name__)
 
 OWNER_ID = 5932230962
-sudo_users = ["6691393517", "6691393517"]
+sudo_users = ["5932230962", "6691393517"]
 GROUP_ID = -1001875834087
 TOKEN = "6730555552:AAFgW2O0ULSC6cH-6wl7KgJdaM297w59bqM"
 mongo_url = "mongodb+srv://vikas:vikas@vikas.yfezexk.mongodb.net/?retryWrites=true&w=majority"
