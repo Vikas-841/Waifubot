@@ -16,16 +16,16 @@ logging.getLogger('httpx').setLevel(logging.WARNING)
 logging.getLogger("pyrate_limiter").setLevel(logging.ERROR)
 LOGGER = logging.getLogger(__name__)
 
-OWNER_ID = 6691393517
+OWNER_ID = 5932230962
 sudo_users = ["6691393517", "6691393517"]
-GROUP_ID = -1001802990747
-TOKEN = "6576720076:AATBvGaPhqWKrSayoXnIL0YtG18"
-mongo_url = "mongodb+srv://te3:te23@cluster0.ysbpgcp.mongodb.net/?retryWrites=true&w=majority"
+GROUP_ID = -1001875834087
+TOKEN = "6730555552:AAFgW2O0ULSC6cH-6wl7KgJdaM297w59bqM"
+mongo_url = "mongodb+srv://vikas:vikas@vikas.yfezexk.mongodb.net/?retryWrites=true&w=majority"
 PHOTO_URL = ["https://telegra.ph/file/72ea883532b722f405059.jpg", "https://telegra.ph/file/72ea883532b722f405059.jpg"]
 SUPPORT_CHAT = "HEROKUFREECC"
 UPDATE_CHAT = "HEROKUFREECC"
 BOT_USERNAME = "AnzooBot"
-CHARA_CHANNEL_ID = -1001802990747
+CHARA_CHANNEL_ID = -1001875834087
 api_id = 6435225
 api_hash = "4e984ea35f854762dcde906dce426c2d"
 
