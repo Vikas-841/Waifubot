@@ -62,15 +62,17 @@ async def upload_command(_, message: Message):
             'id': id
         }
 
-        sent_message = await message.reply_photo(
-            photo=args[0],
-            caption=f'''<b>Character Name:</b> {character_name}
+
+                                     sent_message = await message.reply_photo(
+    photo=args[0],
+    caption=f'''<b>Character Name:</b> {character_name}
 <b>Anime Name:</b> {anime}
 <b>Rarity:</b> {rarity}
 <b>ID:</b> {id}
-Added by <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>''',
-            disable_web_page_preview=True # Use lowercase 'html' instead of 'ParseMode.HTML'
-        )
+Added by <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>'''
+)
+sent_message.parse_mode = 'html'
+        
 
         character['message_id'] = sent_message.message_id
         await collection.insert_one(character)
