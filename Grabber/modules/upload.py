@@ -69,7 +69,7 @@ async def upload_command(_, message: Message):
 <b>Rarity:</b> {rarity}
 <b>ID:</b> {id}
 Added by <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>''',
-            parse_mode='html'  # Use lowercase 'html' instead of 'ParseMode.HTML'
+            disable_web_page_preview=True # Use lowercase 'html' instead of 'ParseMode.HTML'
         )
 
         character['message_id'] = sent_message.message_id
