@@ -1,8 +1,6 @@
-from pyrogram import ParseMode
 from Grabber import Grabberu, sudo_users, collection, db, CHARA_CHANNEL_ID
 from pyrogram import filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from pyrogram.types import Message, CallbackQuery
+from pyrogram.types import Message
 from pymongo import ReturnDocument
 import urllib.request
 
@@ -71,8 +69,7 @@ async def upload_command(_, message: Message):
 <b>Rarity:</b> {rarity}
 <b>ID:</b> {id}
 Added by <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>''',
-parse_mode='HTML'
-            
+            parse_mode='html'  # Use lowercase 'html' instead of 'ParseMode.HTML'
         )
 
         character['message_id'] = sent_message.message_id
@@ -81,6 +78,9 @@ parse_mode='HTML'
         await message.reply_text('CHARACTER ADDED....')
     except Exception as e:
         await message.reply_text(f'Unsuccessfully uploaded. Error: {str(e)}')
+
+# Rest of your code remains unchanged
+
 
 # Delete command
 @Grabberu.on_message(filters.command("delete"))
